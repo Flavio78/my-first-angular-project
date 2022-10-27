@@ -18,4 +18,8 @@ export class ProductsComponent {
   onAddProduct() {
     this.products.push(this.productName);
   }
+
+  onRemoveProduct(product: string) {
+    this.products = this.products.filter((prod) => prod !== product);
+  }
 }

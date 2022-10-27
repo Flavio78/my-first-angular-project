@@ -5,6 +5,10 @@
   (click)="onAddProduct()"
   [disabled]="this.isDisabled"
 >
-  Change Name
+  Add Product
 </button>
-<div *ngFor="let product of this.products">{{ product }}</div>
+<app-product
+  (productClicked)="onRemoveProduct(product)"
+  *ngFor="let product of this.products"
+  [productName]="product"
+></app-product>
