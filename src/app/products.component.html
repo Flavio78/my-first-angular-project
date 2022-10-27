@@ -1,12 +1,9 @@
-<h1>Hi! I'm a Products Component!</h1>
-<input *ngIf="!this.isDisabled" type="text" [(ngModel)]="productName" />
-<button
-  *ngIf="!this.isDisabled"
-  (click)="onAddProduct()"
-  [disabled]="this.isDisabled"
->
-  Add Product
-</button>
+<h1>My products</h1>
+<form (ngSubmit)="onAddProduct(f)" #f="ngForm">
+  <input type="text" ngModel name="productName" required />
+  <button type="submit">Add Product</button>
+</form>
+
 <app-product
   (productClicked)="onRemoveProduct(product)"
   *ngFor="let product of this.products"
