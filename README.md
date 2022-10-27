@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Git settings
 
-renamed branch from master to main
+renamed branch from master to main also in origin
